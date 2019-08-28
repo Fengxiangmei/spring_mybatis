@@ -138,6 +138,8 @@ spring和mybatis集成
       
  2.在项目中添加dao，service，pojo等包和实现类,并在service中添加@Service注解，目录如下：
  
+     ![pic1](https://github.com/Fengxiangmei/spring_mybatis/blob/master/QQ20190828-213645%402x.png)
+ 
  3.在main文件夹下新建resources文件夹，并将其标注为resources root。
  
  4.在resources文件夹添加mybatis配置文件mybatis_config.xml,内容如下：
