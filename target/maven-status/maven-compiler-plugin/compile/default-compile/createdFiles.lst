@@ -1,0 +1,5 @@
+com\fxm\study\App.class
+com\fxm\study\service\StudentService.class
+com\fxm\study\dao\StudentMapper.class
+com\fxm\study\pojo\Student.class
+com\fxm\study\service\StudentServiceImpl.class

@@ -194,7 +194,7 @@ password =123456
     <!--扫描 XXXmapper.xml映射文件,配置扫描的路径-->
     <property name="mapperLocations" value="classpath:com/fxm/study/dao/*.xml"></property>
   </bean>
-  <!-- DAO接口所在包名，Spring会自动查找之中的类 -->
+  <!-- DAO接口所在包名，Spring会扫描包中的接口，并将接口进行实现查 -->
   <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
     <property name="basePackage" value="com.fxm.study.dao" />
     <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"></property>
@@ -269,11 +269,4 @@ public class AppTest
 }
 ```
 
-
-​    
-
-​    
-
- 
-
-​       
+     

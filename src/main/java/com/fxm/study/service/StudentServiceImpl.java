@@ -5,6 +5,10 @@ import javax.annotation.Resource;
 import com.fxm.study.pojo.Student;
 import com.fxm.study.dao.StudentMapper;
 import com.fxm.study.service.StudentService;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
+
+@Transactional
 @Service
 public class StudentServiceImpl implements StudentService{
 
@@ -16,6 +20,7 @@ public class StudentServiceImpl implements StudentService{
         return studentMapper.deleteByPrimaryKey(sno);
     }
 
+    @Transactional(propagation = Propagation.REQUIRED)
     @Override
     public int insert(Student record) {
         return studentMapper.insert(record);
@@ -26,6 +31,7 @@ public class StudentServiceImpl implements StudentService{
         return studentMapper.insertSelective(record);
     }
 
+    @Transactional(propagation =  Propagation.SUPPORTS)
     @Override
     public Student selectByPrimaryKey(Integer sno) {
         return studentMapper.selectByPrimaryKey(sno);
